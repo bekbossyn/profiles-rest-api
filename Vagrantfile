@@ -28,6 +28,10 @@ Vagrant.configure("2") do |config|
     sudo pip install --upgrade pip
     # Install and configure python virtualenvwrapper.
     sudo pip install virtualenvwrapper
+
+    # Git settings
+    git config core.autocrlf true
+
     if ! grep -q VIRTUALENV_ALREADY_ADDED /home/vagrant/.bashrc; then
         echo "# VIRTUALENV_ALREADY_ADDED" >> /home/vagrant/.bashrc
         echo "WORKON_HOME=~/.virtualenvs" >> /home/vagrant/.bashrc
